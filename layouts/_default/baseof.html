@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
   {{ hugo.Generator }}
+  {{ partial "katex.html" . }}
 </head>
 <body>
   {{ partial "banner.html" .}}
