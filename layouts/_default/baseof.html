@@ -21,7 +21,7 @@
   {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
   {{ end }}
   {{ range $allCSS }}
-  <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}">
+  <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
   {{ hugo.Generator }}
 </head>
@@ -36,7 +36,7 @@
   </main>
   {{ partial "footer.html" . }}
   {{ range $allJS }}
-  <script type="text/javascript" src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}"></script>
+  <script type="text/javascript" src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
 </body>
 </html>
